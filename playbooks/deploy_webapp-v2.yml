@@ -1,0 +1,7 @@
+---
+- name: "install docker"
+  import_playbook: docker.yml
+
+- name: "deploy webapp-v2 - using git clone and nginx"
+  import_playbook: webapp-v2.yml
+...
