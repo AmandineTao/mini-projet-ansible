@@ -21,7 +21,8 @@
   pip:
     name: docker-py
     executable: /usr/local/bin/pip3
-    
+
+
 - name: Add Docker CE repo
   get_url:
     url: "{{ add_docker_ce_url }}"
@@ -43,5 +44,11 @@
     name: "{{ ansible_user }}"
     groups: dockerroot
     append: yes
+
+- name: "Install git"
+  yum:
+    name: git
+    state: present
+    update_cache: yes
 
 ...

@@ -10,11 +10,6 @@
     path: "/home/{{ ansible_user }}/webapp-v2/"
     state: directory
 
-- name: "Install git"
-  yum:
-    name: git
-    state: present
-    update_cache: yes
   
 - name: "git clone to nginx folder"
   git:
