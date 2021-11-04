@@ -8,6 +8,10 @@
     - device-mapper-persistent-data
     - lvm2
     - python3
+    - libselinux-python3
+    - git
+
+
   
 - name: download pip script
   get_url:
@@ -45,10 +49,5 @@
     groups: dockerroot
     append: yes
 
-- name: "Install git"
-  yum:
-    name: git
-    state: present
-    update_cache: yes
 
 ...
